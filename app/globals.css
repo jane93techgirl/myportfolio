@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.profile-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 50%; /* Makes it circular */
+  display: block;
+  margin: 20px auto; /* Centers the image */
+}
+:root {
+  --background: hwb(324 5% 93%);
+  --foreground: hwb(0 95% 4% / 0.904);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f3eff2;
+    --foreground: hwb(300 4% 94%);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
