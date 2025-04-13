@@ -1,13 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.profile-pic {
-  width: 200px;
-  height: auto;
-  border-radius: 50%; /* Makes it circular */
-  display: block;
-  margin: 20px auto; /* Centers the image */
-}
+
+
 :root {
   --background: hwb(324 5% 93%);
   --foreground: hwb(0 95% 4% / 0.904);

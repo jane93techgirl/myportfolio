@@ -1,36 +1,74 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 
 const Hero = () => {
+  const techStack = [
+    'React/Next.js', 
+    'Node.js', 
+    'Python', 
+    'Java/Kotlin',
+    'AWS', 
+    'Docker', 
+    'OWASP Top 10', 
+    'Pen Testing'
+  ];
+
   return (
-    <section className="flex flex-col items-center justify-center h-screen text-center bg-gray-900 text-white px-6">
-      {/* Profile Image */}
-      <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 rounded-full overflow-hidden border-4 border-pink-500 shadow-lg">
-        <Image src="/images/profile.jpg" alt="Janet Aborvor" width={192} height={192} className="object-cover" />
+    <section className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-6 md:flex-row md:items-center md:justify-between md:px-12">
+      <div className="max-w-2xl z-10">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+          Hi, I'm <span className="text-pink-500">Janet Aborvor</span>
+        </h1>
+
+        <p className="text-lg md:text-2xl text-gray-300 leading-relaxed mb-8">
+          A <span className="text-pink-400 font-semibold">Software Engineer</span> passionate about 
+          <span className="text-pink-400 font-semibold"> Web Development</span>, 
+          <span className="text-pink-400 font-semibold"> Cybersecurity</span>, and 
+          <span className="text-pink-400 font-semibold"> Android Development</span>.
+        </p>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-bold text-white mb-3">Tech Stack:</h3>
+          <div className="flex flex-wrap gap-2">
+            {techStack.map((tech) => (
+              <span 
+                key={tech}
+                className="px-3 py-1 bg-gray-800/50 rounded-full text-sm border border-gray-700 hover:scale-105 transition-transform"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#projects"
+            className="px-8 py-3 bg-pink-600 text-white font-medium rounded-lg hover:bg-pink-700 transition-all shadow-lg"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-3 border-2 border-pink-500 text-pink-500 font-medium rounded-lg hover:bg-pink-500/10 transition-all"
+          >
+            Contact Me
+          </a>
+        </div>
       </div>
 
-      {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-extrabold">
-        Hi, I'm <span className="text-pink-500">Janet Aborvor</span>
-      </h1>
-
-      {/* Description */}
-      <p className="text-lg md:text-xl mt-4 max-w-2xl text-gray-300 leading-relaxed">
-        A Software Engineer passionate about 
-        <span className="text-pink-400 font-semibold"> Web Development</span>, 
-        <span className="text-pink-400 font-semibold"> Cybersecurity</span>, and 
-        <span className="text-pink-400 font-semibold"> Android Development</span>.  
-        I love solving complex problems and building secure, user-friendly applications.
-      </p>
-
-      {/* CTA Button */}
-      <a 
-        href="#projects"
-        className="mt-6 px-6 py-3 bg-pink-500 text-white rounded-md text-lg font-medium 
-        hover:bg-pink-600 transition duration-300 shadow-lg"
-      >
-        View My Work
-      </a>
+      <div className="mt-12 md:mt-0 md:w-1/3 flex justify-center">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-pink-500/30">
+          <Image 
+            src="/images/profile.jpg" 
+            alt="Janet Aborvor" 
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
     </section>
   );
 };
