@@ -1,9 +1,9 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
 
 export const metadata = {
-  title: "myproject - jane",
-  description: "",
+  title: "myproject - Jane",
+  description: "Welcome to Jane's project portfolio",
 };
 
 export default function RootLayout({ children }) {

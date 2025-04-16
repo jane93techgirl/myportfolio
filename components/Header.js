@@ -8,7 +8,7 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="text-2xl font-bold text-pink-500 hover:text-pink-400 transition-colors duration-200"
+            className="text-2xl font-bold hover:text-pink-400 transition-colors duration-200 custom-name-color"
           >
             Janet Aborvor
           </Link>
@@ -40,9 +40,11 @@ export default function Header() {
             </Link>
           </div>
 
+          {/* Mobile Menu Toggle (optional functionality) */}
           <button 
             className="md:hidden text-gray-300 hover:text-pink-400 transition-colors duration-200"
             aria-label="Mobile menu toggle"
+            // TODO: Add toggle function for mobile nav
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -64,3 +66,4 @@ export default function Header() {
     </header>
   );
 }
+

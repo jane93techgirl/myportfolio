@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.profile-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 50%; /* Makes it circular */
+  display: block;
+  margin: 20px auto; /* Centers the image */
+}
 
 :root {
   --background: hwb(324 5% 93%);
@@ -19,4 +26,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom class to enforce consistent pink color for names */
+.custom-name-color {
+  color: #ec4899; /* Tailwind pink-500 hex equivalent */
 }
